@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#11112b">
+    <title>ColorPop — Make Today Awesome</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="background-orb orb-one"></div>
+    <div class="background-orb orb-two"></div>
+    <div class="background-orb orb-three"></div>
+
+    <header class="site-header">
+        <a class="brand" href="#" aria-label="ColorPop home">
+            <span class="brand-mark">✦</span>
+            <span>ColorPop</span>
+        </a>
+        <nav class="nav-links" aria-label="Main navigation">
+            <a href="#features">Features</a>
+            <a href="#playground">Playground</a>
+            <a href="#about">About</a>
+        </nav>
+        <a class="header-button" href="#playground">Try it <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-copy">
+                <div class="eyebrow"><span class="status-dot"></span> YOUR DAILY DOSE OF COLOR</div>
+                <h1>Make your<br>ideas <span class="gradient-text">pop.</span></h1>
+                <p class="hero-description">
+                    A little color. A little creativity. A whole lot of awesome.
+                    Explore a playful corner of the web made to brighten your day.
+                </p>
+                <div class="hero-actions">
+                    <a class="primary-button" href="#playground">Explore the magic <span>✦</span></a>
+                    <button class="secondary-button" id="surpriseBtn" type="button">Surprise me 🎲</button>
+                </div>
+                <div class="mini-proof">
+                    <div class="avatar-stack" aria-hidden="true">
+                        <span>🌈</span><span>🚀</span><span>🎨</span>
+                    </div>
+                    <p><strong id="happyCount">1,284</strong> little moments of joy</p>
+                </div>
+            </div>
+
+            <div class="hero-art" aria-label="Colorful creative cards">
+                <div class="art-spark spark-a">✦</div>
+                <div class="art-spark spark-b">✧</div>
+                <div class="art-spark spark-c">✳</div>
+                <div class="floating-card card-back">
+                    <span class="tiny-label">TODAY'S VIBE</span>
+                    <div class="vibe-bars"><i></i><i></i><i></i><i></i><i></i></div>
+                    <strong>Unstoppable</strong>
+                </div>
+                <div class="floating-card card-main">
+                    <div class="sun-art"><span>☀</span></div>
+                    <div class="card-main-bottom">
+                        <span class="tiny-label">CREATIVITY LEVEL</span>
+                        <strong>Off the charts!</strong>
+                    </div>
+                </div>
+                <div class="floating-card card-note">
+                    <span class="note-icon">💡</span>
+                    <div><strong>Big ideas</strong><small>start small.</small></div>
+                </div>
+                <div class="art-caption"><span class="caption-line"></span> MADE FOR CURIOUS MINDS</div>
+            </div>
+        </section>
+
+        <section class="feature-section" id="features">
+            <div class="section-heading">
+                <span class="eyebrow">A BRIGHTER KIND OF WEBSITE</span>
+                <h2>Small clicks. <span class="gradient-text">Big smiles.</span></h2>
+                <p>Three tiny things to make this little corner of the internet feel special.</p>
+            </div>
+            <div class="feature-grid">
+                <article class="feature-card feature-pink">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Color your world</h3>
+                    <p>Vibrant gradients and playful details, all made with simple code.</p>
+                    <span class="card-number">01 / CREATE</span>
+                </article>
+                <article class="feature-card feature-blue">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Click into action</h3>
+                    <p>Buttons that respond, messages that change, and surprises to discover.</p>
+                    <span class="card-number">02 / INTERACT</span>
+                </article>
+                <article class="feature-card feature-yellow">
+                    <div class="feature-icon">🌱</div>
+                    <h3>Grow your skills</h3>
+                    <p>Start with three files and turn them into something uniquely yours.</p>
+                    <span class="card-number">03 / LEARN</span>
+                </article>
+            </div>
+        </section>
+
+        <section class="playground-section" id="playground">
+            <div class="playground-copy">
+                <span class="eyebrow">YOUR TURN</span>
+                <h2>Pick a vibe.<br><span class="gradient-text">Change the mood.</span></h2>
+                <p>Tap a color and watch the page glow with a new personality. Go on, experiment!</p>
+                <div class="color-options" role="group" aria-label="Choose a theme color">
+                    <button class="color-dot color-purple active" data-theme="purple" aria-label="Purple theme" aria-pressed="true"></button>
+                    <button class="color-dot color-coral" data-theme="coral" aria-label="Coral theme" aria-pressed="false"></button>
+                    <button class="color-dot color-mint" data-theme="mint" aria-label="Mint theme" aria-pressed="false"></button>
+                    <button class="color-dot color-gold" data-theme="gold" aria-label="Gold theme" aria-pressed="false"></button>
+                </div>
+                <p class="theme-status" id="themeStatus" aria-live="polite">Purple mood activated ✨</p>
+            </div>
+            <div class="playground-preview">
+                <div class="preview-window">
+                    <div class="window-top"><span></span><span></span><span></span><small>your-vibe.exe</small></div>
+                    <div class="preview-content">
+                        <div class="preview-star">✦</div>
+                        <span class="preview-label">TODAY'S REMINDER</span>
+                        <h3>You are allowed<br>to <span id="previewWord">shine.</span></h3>
+                        <p>Keep being wonderfully you.</p>
+                        <div class="preview-progress"><span></span></div>
+                        <div class="preview-footer"><span>GOOD ENERGY</span><span>100%</span></div>
+                    </div>
+                </div>
+                <div class="preview-decoration decoration-one">✳</div>
+                <div class="preview-decoration decoration-two">✧</div>
+            </div>
+        </section>
+
+        <section class="cta-section" id="about">
+            <div class="cta-star">✦</div>
+            <span class="eyebrow">THE INTERNET COULD USE MORE COLOR</span>
+            <h2>Dream it. Build it.<br><span class="gradient-text">Make it yours.</span></h2>
+            <p>This is just the beginning. Your next great idea could be one line of code away.</p>
+            <button class="primary-button" id="messageBtn" type="button">Send some good vibes ✨</button>
+            <p class="good-vibes-message" id="goodVibesMessage" aria-live="polite"></p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <a class="brand footer-brand" href="#"><span class="brand-mark">✦</span><span>ColorPop</span></a>
+        <p>Made with <span class="heart">♥</span> and a little bit of code.</p>
+        <a href="#top" id="backToTop">Back to top ↑</a>
+    </footer>
+</body>
+</html>
